@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Get Promotions data</title>
+<style>
+	body {
+		font-family: Arial, sans-serif;
+		background-color: #f1f1f1; /* 更換背景色 */
+		margin: 0;
+		padding: 20px;
+	}
+
+	h2 {
+
+		color: #333;
+	}
+	a {
+		text-decoration: none;
+		color: blue;
+	}
+
+	a:hover {
+		color: darkblue;
+	}
+	.btn {
+		padding: 8px 20px;
+		background-color: #4CAF50;
+		color: white;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		transition: background-color 0.3s;
+		text-decoration: none;
+	}
+
+	.btn:hover {
+		background-color: #45a049;
+	}
+
+	.btn-danger {
+		background-color: #f44336;
+	}
+
+	.btn-danger:hover {
+		background-color: #cc0000;
+	}
+</style>
+</head>
+<body>
+	<h2>查詢活動資料</h2>
+	<form method="post" action="/team6/PromotionsController">
+		輸入活動編號 : <input type="text" name="Promotions_id" />
+		<button name="fun" value="GetOne">查詢</button>
+		<p>
+			
+	</form>
+	<div>
+		<p>
+			<a class="btn" href="/team6/Promotions/html/PromotionsIndex.html">回首頁</a>
+		</p>
+	</div>
+</body>
+</html>

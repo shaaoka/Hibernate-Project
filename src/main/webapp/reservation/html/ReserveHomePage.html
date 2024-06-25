@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>訂位系統管理後台</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        #header {
+            text-align: center;
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 10px0;
+        }
+
+        #left-column,
+        #right-column {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        #right-column {
+            margin-left: 200px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+       
+
+        table {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+		button {
+		    border: none;
+		    border-radius: 8px;
+		    padding: 10px 20px;
+		    background-color: #3498db;
+		    color: white;
+		    text-align: center;
+		    text-decoration: none;
+		    display: inline-block;
+		    font-size: 14px;
+		    margin: 4px 2px;
+		    cursor: pointer;
+		    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* 添加陰影效果 */
+		    transition-duration: 0.4s;
+		}
+		
+		button:hover {
+		    background-color: #2980b9;
+		    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); /* 滑鼠懸停時的陰影效果 */
+		}
+
+
+        table {
+            font-size: xx-small;
+            width: 100%;
+            /* 9 5 */
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="userName" style="font-size: smaller;">
+        <p>會員______您好，您的權限為：______</p>
+    </div>
+    <a id="reserveNow" href="./customerReservePage.html">立即訂位</a>
+    <div id="header">
+        <h1>訂位系統管理後台</h1>
+    </div>
+    <div id="container">
+        <div id="left-column">
+            <div id="CheckIn">
+                <h3>Check in</h3>
+                <form method="get" action="../../ReserveHomePage">
+                    <div>
+                        姓名：<input type="text" placeholder="姓名及電話擇一輸入即可，若未輸入則顯示所有未報到客人資訊" name="nameSelect">
+                    </div>
+                    <button value="selectByName" name="checkin" >姓名查詢</button>
+                    <div>
+                        電話：<input type="text" placeholder="姓名及電話擇一輸入即可" name="phoneSelect">
+                    </div>
+                    <button value="selectByPhone" name="checkin">電話查詢</button>
+                    <div>
+                    <button value="selectAllChecked" name="checkin">目前用餐客人資訊</button>
+                    </div>
+                </form>
+                    <div>
+    </div>
+                
+                <div id="Seat" style="margin: 0;
+                overflow: hidden;">
+                    <iframe src="./reservationPage.html"
+                        style="width: 25vw; height: 50vh; "></iframe>
+                </div>
+            </div>
+        </div>
+        <div id="right-column">
+        	<h3>依日期查詢預訂訊息</h3>
+           			<form method="get" action="../../ReserveHomePage">
+                <div id="reservationStatus">
+                    <input id="date" type="date" name="dateSelect" style="background-color: #b8f083;">
+                   <div>
+                   		<button value="selectByDate" name="checkin">查詢</button>
+                   	</form>
+                   
+                   </div>  
+
+                </div>
+                <div id="ReservationComfirm">
+					<div>   	              
+                    <h3>待確認預訂訊息</h3>
+                <form action="../../ReserveHomePage" method="get">     
+                    	<button value="selectByStatus" name="checkin">查詢</button>
+                    	</form>
+                    </div>
+
+        </div> 
+	 </div>
+<!-- <a href="./team6/member/html/Index.html"><button>回主頁</button></a> -->
+<br>
+<a href="/team6/member/jsp/Index.jsp"><button>
+						<b>返回後台管理</b>
+					</button></a>
+</body>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</html>

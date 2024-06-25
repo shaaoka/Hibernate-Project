@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<hibernate-mapping>
+    <class name="com.team6.model.BossAccount" table="bossAccount">
+        <id name="account" type="java.lang.String">
+            <column name="account" sql-type="nvarchar(20)"/>
+            <generator class="assigned" />
+        </id>
+        <property name="mName" type="java.lang.String">
+            <column name="mName" sql-type="nvarchar(20)" />
+        </property>
+        <property name="password" type="java.lang.String">
+            <column name="password" sql-type="nvarchar(18)" />
+        </property>
+    </class>
+</hibernate-mapping>

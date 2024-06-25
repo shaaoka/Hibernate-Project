@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<hibernate-mapping>
+    <class name="com.team6.model.MemberBean" table="member">
+        <id name="account" type="java.lang.String">
+            <column name="account" sql-type="nvarchar(20)"/>
+            <generator class="assigned" />
+        </id>
+        <property name="mName" type="java.lang.String">
+            <column name="mName" sql-type="nvarchar(20)" />
+        </property>
+        <property name="password" type="java.lang.String">
+            <column name="password" sql-type="nvarchar(18)" />
+        </property>
+        <property name="mEmail" type="java.lang.String">
+            <column name="mEmail" sql-type="nvarchar(50)" />
+        </property>
+        <property name="mPhone" type="java.lang.String">
+            <column name="mPhone" sql-type="nvarchar(10)" />
+        </property>
+        <property name="birthday" type="java.lang.String">
+            <column name="birthday" />
+        </property>
+        <property name="permissions" type="java.lang.Integer">
+            <column name="permissions" />
+        </property>
+    </class>
+</hibernate-mapping>
